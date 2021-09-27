@@ -1,0 +1,14 @@
+<p>
+<strong>ツイート:</strong>
+<%= @tweet.message %>
+</p>
+<p>
+
+<% totime= @tweet.tdate%>
+<% now = Time.current %>
+<%remain = (now - totime).to_i%>
+<% minit = remain / 60 %> 
+<%= minit %>分前</p>
+
+</p>
+<%= link_to '戻る', '/' %>

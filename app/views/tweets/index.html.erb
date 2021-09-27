@@ -1,0 +1,18 @@
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+<% @tweets.each do |tweet| %>
+<p><%= tweet.message %><br>
+<% now = Time.current %>
+<% totime = tweet.tdate  %>
+<%remain = (now - totime).to_i%>
+<% minit = remain / 60 %> 
+<%= minit %>分前</p>
+
+<button><%= link_to '表示', "/tweets/#{tweet.id}" %></button>
+<button><%= link_to '削除', "/tweets/#{tweet.id}",
+method: :delete %></button>
+<button><%= link_to '編集', "/tweets/#{tweet.id}/edit" %></button></p>
+
+<% end %>
+<p><%= link_to '新規追加', '/tweets/new' %></p>
