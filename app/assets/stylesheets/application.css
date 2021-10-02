@@ -15,23 +15,6 @@ body{
     
 }
 
-#sidebar{
-    width:220px;
-    float:left;
-    
-    
-}
-
-#content{
-    width:720px;
-    float:right;
-    float:bottom;
-    border-right:solid 1px #ccc;
-    border-left:solid 1px #ccc;
-    padding:10px 30px;
-    border-top:solid 1px #ccc;
-}
-
 nav ul {
     list-style-type: none;
     margin:0;
@@ -55,22 +38,30 @@ nav li a:hover{
     background-color:#ccc;
     color: #696969;
 }
+#sidebar{
+    width:220px;
+    float:left;
+    position: fixed;
+    
+    
+}
 ul {
     list-style: none;
 }
-li{
+
+#sidebar li{
     margin:20px 0px;
     border-radius: 50px;
     color:black;
-    
-    
-    
 }
+
 li:hover{
     background-color:#ccc;
 }
 #side_text{
     text-decoration: none;
+    color:black;
+    
 }
 #side_img{
     width:20%;
@@ -85,4 +76,17 @@ li:hover{
     color:white;
     text-decoration: none;
 }
+
+#content{
+    width:720px;
+    float:right;
+    float:bottom;
+    border-right:solid 1px #ccc;
+    border-left:solid 1px #ccc;
+    padding:10px 30px;
+    border-top:solid 1px #ccc;
+}
+
+
+
 
